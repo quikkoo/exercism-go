@@ -3,6 +3,10 @@ Exercism Go
 
 [![GPLv3 License](http://img.shields.io/badge/license-GPLv3-blue.svg)](https://www.gnu.org/copyleft/gpl.html)
 
+[![CircleCI](https://circleci.com/gh/quikkoo/exercism-go.svg?style=svg)](https://circleci.com/gh/quikkoo/exercism-go)
+[![Build Status](https://snap-ci.com/quikkoo/exercism-go/branch/master/build_image)](https://snap-ci.com/quikkoo/exercism-go/branch/master)
+[![Codeship Status for quikkoo/exercism-go](https://app.codeship.com/projects/c874bd70-671a-0134-0005-62ec90e592b2/status?branch=master)](https://app.codeship.com/projects/176110)
+
 Go exercises from [exercism.io](http://exercism.io/)
 
 This is a multi module project for all exercises in go language,
