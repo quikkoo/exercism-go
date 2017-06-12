@@ -2,7 +2,7 @@ package bob
 
 import "regexp"
 
-var fine = regexp.MustCompile("^[\\s\\v\\u00a0\\u2002]*$")
+var fine = regexp.MustCompile("^[\\s\\v\u00a0\u2002]*$")
 var whoa = regexp.MustCompile("^[^\\p{Ll}]*[A-Z][^\\p{Ll}]*$")
 var sure = regexp.MustCompile("^.*\\?[\\s\\v]*$")
 
