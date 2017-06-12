@@ -1,5 +1,9 @@
-*.o
 *.a
+*.o
 *.so
+*.dll
+*.exe
+*.dylib
+
 coverage/
 

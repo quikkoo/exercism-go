@@ -1,6 +1,4 @@
-#!/bin/sh
-
-set -e
+#!/bin/sh -e
 
 MODULES="      \
   anagram      \
@@ -9,6 +7,8 @@ MODULES="      \
   hello-world  \
   word-count   \
 "
+
+TASK=${1:-"all"}
 
 export PATH=$PATH:$HOME/bin
 
@@ -41,13 +41,6 @@ task_clean() {
 
   rm -rf $MODULE/coverage
 }
-
-if [ -z $1 ]
-then
-  TASK=all
-else
-  TASK=$1
-fi
 
 export GOPATH=$HOME
 go get -u github.com/golang/lint/golint

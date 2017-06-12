@@ -5,15 +5,14 @@ import (
     "strings"
 )
 
-var pattern = regexp.MustCompile("[^'a-zA-Z0-9]+")
+var pattern = regexp.MustCompile("[']?[^'a-zA-Z0-9]+[']?")
 
-func Count(phrase string) map[string]int {
-    var words = pattern.Split(phrase, -1)
+func Calculate(phrase string) map[string]int {
+    var words = pattern.Split(strings.ToLower(phrase), -1)
 
     var result = make(map[string]int)
-    for _, wrd := range words {
-        if wrd != "" {
-            var word = strings.ToLower(wrd)
+    for _, word := range words {
+        if word != "" {
             var count = result[word] + 1
             result[word] = count
         }

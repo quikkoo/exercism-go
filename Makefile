@@ -2,36 +2,33 @@ SHELL = /bin/sh
 
 export GOPATH = $(HOME)
 
-MODULES += anagram
-MODULES += bob
-MODULES += etl
-MODULES += hello-world
-MODULES += word-count
+MODULES = \
+	anagram     \
+	bob         \
+	etl         \
+	hello-world \
+	word-count
 
 all:
-	$(MAKE) -C anagram $@
-	$(MAKE) -C bob $@
-	$(MAKE) -C etl $@
-	$(MAKE) -C hello-world $@
-	$(MAKE) -C word-count $@
+	@for MODULE in $(MODULES);  \
+	do                          \
+		$(MAKE) -C $$MODULE $@; \
+	done
 
 check:
-	$(MAKE) -C anagram $@
-	$(MAKE) -C bob $@
-	$(MAKE) -C etl $@
-	$(MAKE) -C hello-world $@
-	$(MAKE) -C word-count $@
+	@for MODULE in $(MODULES);  \
+	do                          \
+		$(MAKE) -C $$MODULE $@; \
+	done
 
 test:
-	$(MAKE) -C anagram $@
-	$(MAKE) -C bob $@
-	$(MAKE) -C etl $@
-	$(MAKE) -C hello-world $@
-	$(MAKE) -C word-count $@
+	@for MODULE in $(MODULES);  \
+	do                          \
+		$(MAKE) -C $$MODULE $@; \
+	done
 
 clean:
-	$(MAKE) -C anagram $@
-	$(MAKE) -C bob $@
-	$(MAKE) -C etl $@
-	$(MAKE) -C hello-world $@
-	$(MAKE) -C word-count $@
+	@for MODULE in $(MODULES);  \
+	do                          \
+		$(MAKE) -C $$MODULE $@; \
+	done

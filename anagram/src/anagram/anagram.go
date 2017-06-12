@@ -23,9 +23,10 @@ func filter(array []string, f func(string) bool) []string {
     var filtered = make([]string, 0)
     for _, value := range array {
         if f(value) {
-                        filtered = append(filtered, value)
+            filtered = append(filtered, value)
         }
     }
+
     return filtered
 }
 
